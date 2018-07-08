@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-3-29 20:15:38 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="myHibernate.Opinion" table="opinion" catalog="weibo" optimistic-lock="version">
+        <id name="symbol" type="int">
+            <column name="symbol" />
+            <generator class="assigned" />
+        </id>
+        <property name="msgId" type="int">
+            <column name="msgID" not-null="true" />
+        </property>
+        <property name="id" type="string">
+            <column name="id" not-null="true" />
+        </property>
+        <property name="comment" type="string">
+            <column name="comment" not-null="true" />
+        </property>
+        <property name="praise" type="int">
+            <column name="praise" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
